@@ -10,7 +10,7 @@ interface LetterProps{
 const Letter: FC<LetterProps> = ({letter, colour}) =>  {
     return (
         <>
-            <a className={styles.letter}>{letter}</a>
+            <a className={`${styles.letter} ${styles.colour}`}>{letter}</a>
         </>
     );
 }

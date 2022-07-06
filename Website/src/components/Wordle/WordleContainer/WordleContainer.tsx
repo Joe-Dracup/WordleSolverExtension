@@ -1,6 +1,7 @@
 import { FC, useState } from "react";
 import Input from "../../keyboard/input";
 import Row from "../Row/Row";
+import styles from "./WordleContainer.module.scss"
 
 interface WordleContainerProps{
 
@@ -28,11 +29,13 @@ const WordleContainer: FC<WordleContainerProps> = () =>  {
 
     return(
         <>
-            {words.map((element) => {
-                return <Row letters={element}></Row>;
-            })}
-            
-            <Input handleChange={handleChange} handleSubmit={handleSubmit} text={input}></Input>
+            <div className={styles.wordleContainer}>
+                {words.map((element) => {
+                    return <Row letters={element}></Row>;
+                })}
+                
+                <Input handleChange={handleChange} handleSubmit={handleSubmit} text={input}></Input>
+            </div>
         </>
     );
 }

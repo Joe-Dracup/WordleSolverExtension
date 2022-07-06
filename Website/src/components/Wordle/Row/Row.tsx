@@ -10,7 +10,7 @@ const Row: FC<RowProps> = ({letters}) => {
     let lettersArray = letters.split('');
 
     return (
-        <div>
+        <div className={styles.Row}>
             {lettersArray.map((element) => {
                 return <Letter letter={element} colour='green'></Letter>
             })}
