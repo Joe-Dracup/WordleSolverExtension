@@ -1,4 +1,6 @@
 import { FC } from "react";
+import { setSyntheticLeadingComments } from "typescript";
+import styles from "./Letter.module.scss"
 
 interface LetterProps{
     letter: string
@@ -8,7 +10,7 @@ interface LetterProps{
 const Letter: FC<LetterProps> = ({letter, colour}) =>  {
     return (
         <>
-            <a className={colour}>{letter}</a>
+            <a className={styles.letter}>{letter}</a>
         </>
     );
 }

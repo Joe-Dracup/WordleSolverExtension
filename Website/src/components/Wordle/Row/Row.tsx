@@ -1,5 +1,6 @@
 import React, { FC } from 'react';
-import Letter from './Letter';
+import Letter from '../Letter/Letter';
+import styles from "./Row.module.scss"
 
 interface RowProps{
     letters: string
@@ -9,11 +10,11 @@ const Row: FC<RowProps> = ({letters}) => {
     let lettersArray = letters.split('');
 
     return (
-        <>
+        <div>
             {lettersArray.map((element) => {
                 return <Letter letter={element} colour='green'></Letter>
             })}
-        </>
+        </div>
     );
 }
 

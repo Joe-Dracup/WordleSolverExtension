@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import Wordle from './components/Wordle/Wordle';
-import './index.css';
+import WordleContainer from './components/Wordle/WordleContainer/WordleContainer';
+import './index.scss';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(
@@ -9,7 +9,7 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
-    <Wordle></Wordle>
+    <WordleContainer></WordleContainer>
   </React.StrictMode>
 );
 

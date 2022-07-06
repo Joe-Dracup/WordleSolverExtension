@@ -1,12 +1,12 @@
 import { FC, useState } from "react";
-import Input from "../keyboard/input";
-import Row from "./Row";
+import Input from "../../keyboard/input";
+import Row from "../Row/Row";
 
-interface WordleProps{
+interface WordleContainerProps{
 
 }
 
-const Wordle: FC<WordleProps> = () =>  {
+const WordleContainer: FC<WordleContainerProps> = () =>  {
     const [input, setInput] = useState('');
     const [words, setWords] = useState<string[]>([]);
 
@@ -28,7 +28,7 @@ const Wordle: FC<WordleProps> = () =>  {
 
     return(
         <>
-            {words.map((element, index) => {
+            {words.map((element) => {
                 return <Row letters={element}></Row>;
             })}
             
@@ -37,4 +37,4 @@ const Wordle: FC<WordleProps> = () =>  {
     );
 }
 
-export default Wordle;
+export default WordleContainer;
