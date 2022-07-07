@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import { FC } from 'react';
 import Letter from '../Letter/Letter';
 import styles from "./Row.module.scss"
 
@@ -8,6 +8,9 @@ interface RowProps{
 
 const Row: FC<RowProps> = ({letters}) => {
     let lettersArray = letters.split('');
+    if(lettersArray.length == 0){
+        lettersArray = ['','','','',''];
+    }
 
     return (
         <div className={styles.Row}>

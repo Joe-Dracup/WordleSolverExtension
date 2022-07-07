@@ -1,4 +1,4 @@
-import { FC, useEffect, useState } from "react";
+import { FC, useState } from "react";
 import Input from "../../keyboard/input";
 import Row from "../Row/Row";
 import styles from "./WordleContainer.module.scss"

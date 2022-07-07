@@ -1,5 +1,4 @@
 import { FC } from "react";
-import { setSyntheticLeadingComments } from "typescript";
 import styles from "./Letter.module.scss"
 
 interface LetterProps{
